@@ -1,15 +1,15 @@
 const options = [
   {
     title: "File",
-    clickHandler: () => "",
+    menu: ["New", "Open", "Save", "Exit"],
   },
   {
     title: "Edit",
-    clickHandler: () => "",
+    menu: ["Undo", "Redo", "Cut", "Copy", "Paste", "Delete"],
   },
   {
     title: "Window",
-    clickHandler: () => "",
+    menu: ["Change Theme"],
   },
 ];
 
@@ -18,7 +18,7 @@ const Topbar = () => {
     <div className="bg-amber-200 h-[5vh] flex items-center pl-[10vh]">
       <div className="flex gap-4 w-fit">
         {options.map((opt) => (
-          <span>{opt.title}</span>
+          <span key={opt.title}>{opt.title}</span>
         ))}
       </div>
     </div>
